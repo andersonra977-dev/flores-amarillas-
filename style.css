@@ -1,0 +1,484 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #000;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+}
+
+
+body {
+
+    position: relative;
+
+}
+
+
+/* =========================
+   ESCENA
+========================= */
+
+#app {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* =========================
+   PANTALLA INICIAL
+========================= */
+
+#inicio {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #21102e 0%,
+            #09030d 45%,
+            #000 100%
+        );
+
+    cursor: pointer;
+
+    transition:
+
+        opacity 1.5s ease,
+
+        visibility 1.5s ease;
+
+}
+
+
+#inicio.oculto {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================
+   FLOR INICIAL
+========================= */
+
+.flor-inicio {
+
+    font-size: 80px;
+
+    margin-bottom: 25px;
+
+    animation:
+
+        flotar 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes flotar {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-4deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(4deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-4deg);
+
+    }
+
+}
+
+
+/* =========================
+   TEXTO INICIAL
+========================= */
+
+#inicio h1 {
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+}
+
+
+#inicio p {
+
+    margin-top: 12px;
+
+    font-size: 15px;
+
+    opacity: .65;
+
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+#contenido {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    pointer-events: none;
+
+    color: white;
+
+}
+
+
+/* =========================
+   NOMBRE
+========================= */
+
+#nombre {
+
+    font-size:
+
+        clamp(
+            40px,
+            8vw,
+            85px
+        );
+
+    font-weight: bold;
+
+    text-shadow:
+
+        0 0 10px white,
+
+        0 0 30px #ffd21f,
+
+        0 0 60px #ffae00;
+
+}
+
+
+/* =========================
+   MENSAJE
+========================= */
+
+#mensaje {
+
+    max-width: 700px;
+
+    margin-top: 20px;
+
+    font-size:
+
+        clamp(
+            17px,
+            3vw,
+            25px
+        );
+
+    line-height: 1.6;
+
+    text-shadow:
+
+        0 0 10px white;
+
+}
+
+
+/* =========================================
+   FLORES REALISTAS
+========================================= */
+
+.flor-galaxia {
+
+    position: fixed;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.flor-galaxia img {
+
+    display: block;
+
+    width: 50px;
+
+    height: auto;
+
+    pointer-events: none;
+
+    filter:
+
+        drop-shadow(
+            0 0 5px
+            rgba(255, 210, 40, .7)
+        )
+
+        drop-shadow(
+            0 0 12px
+            rgba(255, 190, 0, .5)
+        );
+
+}
+
+
+/* =========================================
+   FRASES QUE GIRAN EN LA GALAXIA
+========================================= */
+
+.frase-galaxia {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 20;
+
+    color: #fff4b0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    text-shadow:
+
+        0 0 5px
+        rgba(255, 220, 80, 0.8),
+
+        0 0 12px
+        rgba(255, 190, 30, 0.6),
+
+        0 0 25px
+        rgba(255, 170, 0, 0.4);
+
+    opacity: 1;
+
+}
+
+
+/* =====================================
+   TEXTO CENTRAL
+===================================== */
+
+.texto-central {
+
+    position: fixed;
+
+    top: 10%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 30;
+
+    width: 80%;
+
+    max-width: 700px;
+
+    text-align: center;
+
+    color: rgb(206, 219, 19);
+
+    pointer-events: none;
+
+    text-shadow:
+
+        0 0 8px #fff4b0,
+
+        0 0 20px #ffd21f,
+
+        0 0 40px #ffae00;
+
+    line-height: 1.4;
+
+    opacity: 0.9;
+
+}
+
+
+.texto-central h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+}
+
+
+.texto-central p {
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:600px) {
+
+    #nombre {
+
+        font-size: 45px;
+
+    }
+
+
+    #mensaje {
+
+        font-size: 18px;
+
+    }
+
+
+    .flor-inicio {
+
+        font-size: 65px;
+
+    }
+
+
+    .flor-galaxia img {
+
+        width: 38px;
+
+    }
+
+
+    .frase-galaxia {
+
+        font-size: 13px;
+
+    }
+
+
+    .texto-central {
+
+        width: 90%;
+
+    }
+
+
+    .texto-central h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .texto-central p {
+
+        font-size: 15px;
+
+    }
+
+}
