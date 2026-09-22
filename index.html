@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Para ti ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <div id="inicio">
+
+        <div class="flor-inicio">
+            🌻
+        </div>
+
+        <h1>
+            Toca para iniciar
+        </h1>
+
+        <p>
+            Tengo algo especial para ti MAGALY DE PARTE DE STIV.
+        </p>
+
+    </div>
+
+    <!-- ESCENA 3D -->
+    <div id="app"></div>
+
+    <!-- TEXTO -->
+    <div id="contenido">
+
+        <h1 id="nombre"></h1>
+
+        <p id="mensaje"></p>
+
+    </div>
+
+    <!-- MÚSICA -->
+    <audio
+        id="musica"
+        loop
+    ></audio>
+
+    <!-- CONFIGURACIÓN -->
+    <script src="js/config.js"></script>
+
+    <!-- THREE.JS -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
+
+</body>
+
+</html>
